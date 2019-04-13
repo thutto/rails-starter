@@ -1,0 +1,16 @@
+
+<div>
+  <h1 class="container">My Notes</h1>
+  <% if @notes.length > 0 %>
+    <% @notes.each do |note| %>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text"> <%= note.noteText %></p>
+          <h6 class="card-subtitle mb-2 text-muted"><%= note.created_at.strftime("created on %m/%d/%Y") %></h6>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <h3>You have not Notes!</h3>
+  <% end %>
+</div>

@@ -1,0 +1,38 @@
+<%# navigation styled for Bootstrap 4.0 %>
+<!--<div class="container">-->
+<!--  <nav class="navbar navbar-default">-->
+<!--    <ul class="nav navbar-nav clearfix">-->
+<!--      <li class="nav-item">-->
+<!--        <button class="navbar-toggler hidden-sm-up nav-link" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--          &#9776;-->
+<!--        </button>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">-->
+      <%#= link_to "Home", root_path, class: 'navbar-brand' %>
+<!--      <ul class="nav navbar-nav">-->
+        <%#= render 'layouts/navigation_links' %>
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </nav>-->
+<!--</div>-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <%#= link_to "Home", root_path, class: 'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <%= render 'layouts/navigation_links' %>
+    </ul>
+    <ul class="navbar-nav ml-auto navbar-right">
+      <li class='nav-item'><%= link_to 'New Note', new_note_path, class: 'nav-link' %></li>
+
+    </ul>
+  </div>
+</nav>
