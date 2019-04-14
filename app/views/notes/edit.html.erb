@@ -1,6 +1,6 @@
 <div class="container">
-  <h1>Add Note</h1>
-  <%= form_for :note, url: notes_path do |form| %>
+  <h1>Edit Note</h1>
+  <%= form_for :note, url: note_path(@note), method: :put do |form| %>
     <p>
       <%= form.label :noteText, 'Note', { :class => 'sr-only'} %><br>
       <%= form.text_area(:noteText, { :class => 'form-control'}) %>

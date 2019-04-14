@@ -2,5 +2,7 @@
   <div class="card-body">
     <p class="card-text"> <%= @note.noteText %></p>
     <h6 class="card-subtitle mb-2 text-muted"><%= @note.created_at.strftime("created on %m/%d/%Y") %></h6>
+    <%= link_to "Edit", edit_note_path(@note), :class => "card-link" %>
+    <%#= link_to "Remove", destroy_note_path(@note), :class => "card-link" %>
   </div>
 </div>
